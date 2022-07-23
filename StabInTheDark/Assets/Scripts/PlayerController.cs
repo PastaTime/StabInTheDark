@@ -23,6 +23,7 @@ public class PlayerController : MonoBehaviour
  
     void FixedUpdate()
     {
+        Debug.Log(movement);
         moveCharacter(movement); // We call the function 'moveCharacter' in FixedUpdate for Physics movement
     }
  

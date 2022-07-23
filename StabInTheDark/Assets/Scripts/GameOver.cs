@@ -20,7 +20,6 @@ public class GameOver : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {   
-        Debug.Log("Entered.");
         PlayerController controller = other.GetComponent<PlayerController>();
 
         if (controller != null)
