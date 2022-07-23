@@ -71,7 +71,6 @@ public class HapticSource : MonoBehaviour
                         float inX = Mathf.Abs(Input.GetAxis("Horizontal"));
                         float inY = Mathf.Abs(Input.GetAxis("Vertical"));
                         collisionScalar = (inX + inY)*0.75f;
-                        Debug.Log(collisionScalar);
                         
                         if (inX == 0.0f && inY == 0.0f)
                         {
