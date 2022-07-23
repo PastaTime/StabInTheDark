@@ -15,8 +15,7 @@ public class TimerScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        timerOn = true;
-        
+        timerOn = true;      
     }
 
     // Update is called once per frame

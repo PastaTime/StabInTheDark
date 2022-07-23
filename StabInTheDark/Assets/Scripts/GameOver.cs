@@ -18,8 +18,9 @@ public class GameOver : MonoBehaviour
         
     }
 
-    void OnTriggerEnter2D(Collider2D other)
+    void OnTriggerEnter(Collider other)
     {   
+        Debug.Log("Entered.");
         PlayerController controller = other.GetComponent<PlayerController>();
 
         if (controller != null)
