@@ -1,43 +1,36 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.InputSystem;
+ 
 public class PlayerController : MonoBehaviour
 {
-    public Rigidbody2D rb;
-    public float moveSpeed = 5.0f;
-    public InputAction playerControls;
-
-    Vector2 moveDirection = Vector2.zero;
-
-    private void OnEnable()
-    {
-        playerControls.Enable();
-    }
-
-    private void OnDisable()
-    {
-        playerControls.Disable();
-    }
+    public float speed = 100f; // Speed variable
+    public Rigidbody rb; // Set the variable 'rb' as Rigibody
+    public Vector3 movement; // Set the variable 'movement' as a Vector3 (x,y,z)
     
-    // Start is called before the first frame update
+ 
     void Start()
     {
-        
+        rb = this.GetComponent<Rigidbody>();
     }
+ 
 
-    // Update is called once per frame
     void Update()
     {
-        // float x = Input.GetAxis("Horizontal");
-        // float y = Input.GetAxis("Vertical");
-
-        moveDirection = playerControls.ReadValue<Vector2>();
-
+        movement = new Vector3(Input.GetAxis("Horizontal"), 0 ,Input.GetAxis("Vertical")).normalized;
     }
-
-    private void FixedUpdate()
+ 
+ 
+    void FixedUpdate()
     {
-        rb.velocity = new Vector2(moveDirection.x * moveSpeed, moveDirection.y * moveSpeed);
+        moveCharacter(movement); // We call the function 'moveCharacter' in FixedUpdate for Physics movement
     }
+ 
+ 
+ 
+    void moveCharacter(Vector3 direction)
+    {
+        rb.velocity = direction * speed * Time.fixedDeltaTime;
+    }
+ 
 }
