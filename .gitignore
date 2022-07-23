@@ -59,3 +59,7 @@ sysinfo.txt
 crashlytics-build.properties
 
 /StabInTheDark/Temp
+/StabInTheDark/Library
+/StabInTheDark/Logs
+/StabInTheDark/Packages
+/StabInTheDark/UserSettings/Layouts/default-2021.dwlt
