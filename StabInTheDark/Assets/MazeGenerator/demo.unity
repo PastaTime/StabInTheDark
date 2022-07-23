@@ -498,12 +498,13 @@ MonoBehaviour:
   Floor: {fileID: 165842, guid: 8d3b36f175a633f429d7bda54c76550d, type: 3}
   Wall: {fileID: 144206, guid: 9de82ec743bb24449a99f5cf1e325d61, type: 3}
   Pillar: {fileID: 142476, guid: f3f97a2401feba4479a301d6181e9da6, type: 3}
-  Rows: 10
-  Columns: 10
+  Rows: 20
+  Columns: 20
   CellWidth: 4
   CellHeight: 4
   AddGaps: 0
   GoalPrefab: {fileID: 159624, guid: 850205124263c924ea0aa82f0fdf2673, type: 3}
+  MazeDensity: 0.1
 --- !u!115 &999177115
 MonoScript:
   m_ObjectHideFlags: 0
