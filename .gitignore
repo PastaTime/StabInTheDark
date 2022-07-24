@@ -67,3 +67,6 @@ crashlytics-build.properties
 .idea/
 
 .vsconfig
+
+*.mp3
+*.wav
