@@ -69,3 +69,4 @@ crashlytics-build.properties
 .vsconfig
 /Assets/Resources/SUISFX/lostGame.wav.meta
 *.wav
+/Assets/Resources/SUISFX
