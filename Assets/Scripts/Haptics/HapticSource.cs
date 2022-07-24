@@ -12,15 +12,18 @@ public class HapticSource : MonoBehaviour
     public HapticInfo hapticInfo;
     public float hapticStrength = 1.0f;
     public int hapticOffset = 0;
+    public bool syncAudioToHaptic = false;
     public bool playHapticOnStart = false;
     public bool playHapticOnCollision = false;
 
     // Private
     float timer;
     float collisionScalar = 1.0f;
+    float intervalScalar = 1.0f;
     int index;
     bool isColliding = false;
     HapticListener[] listeners;
+    AudioSource audioSource;
 
     // Start is called before the first frame update
     void Start()
@@ -33,7 +36,9 @@ public class HapticSource : MonoBehaviour
         {
             index = hapticInfo.hapticArray.Length;
         }
+
         listeners = GameObject.FindObjectsOfType<HapticListener>();
+        audioSource = gameObject.GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -59,7 +64,16 @@ public class HapticSource : MonoBehaviour
                         lis.HearHaptics(hapticLeft, hapticRight, transform.position, hapticInfo.hapticMaxDistance);
                     }
 
-                    timer = hapticInfo.tickInterval;
+                    if (index == 0 && syncAudioToHaptic)
+                    {
+                        float dist = Vector3.Distance(listeners[0].transform.position, transform.position);
+                        float distScale = 1.0f - (dist/hapticInfo.hapticMaxDistance);
+                        audioSource.pitch = 1.0f + distScale;
+                        audioSource.volume = distScale;
+                        audioSource.Play(0);             
+                    }
+
+                    timer = hapticInfo.tickInterval * intervalScalar;
                     index++;
                 }
                 else if (hapticInfo.isHapticLooping || (playHapticOnCollision && isColliding))
@@ -105,5 +119,10 @@ public class HapticSource : MonoBehaviour
     {
         index = hapticInfo.hapticArray.Length;
         isColliding = false;
+    }
+
+    public void SetIntervalScalar (float intervalScaleValue)
+    {
+        intervalScalar = intervalScaleValue;
     }
 }
