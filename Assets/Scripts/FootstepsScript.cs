@@ -22,7 +22,7 @@ public class FootstepsScript : MonoBehaviour
         stepCoolDown -= Time.deltaTime;
 		if ((Input.GetAxis("Horizontal") != 0f || Input.GetAxis("Vertical") != 0f) && stepCoolDown < 0f){
 			int randomIndex = Random.Range(0, audioSamples.Count);
-            audio.pitch = 1f + Random.Range (-0.2f, 0.2f);
+            audio.pitch = 1.5f + Random.Range (-0.2f, 0.2f);
             audio.volume = Random.Range (0.8f, 1.0f);
 			audio.PlayOneShot (audioSamples[randomIndex], 0.9f);
 			stepCoolDown = stepRate;
