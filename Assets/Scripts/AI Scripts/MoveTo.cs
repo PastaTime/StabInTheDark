@@ -92,7 +92,7 @@ public class MoveTo : MonoBehaviour
     {
         float randomProbability = UnityEngine.Random.Range(0f, 1f);
         bool activeGo = randomProbability < _switchProbability;
-        Debug.Log(randomProbability.ToString() + " " + activeGo.ToString());
+        // Debug.Log(randomProbability.ToString() + " " + activeGo.ToString());
         
         if (activeGo)
         {
@@ -101,12 +101,12 @@ public class MoveTo : MonoBehaviour
 
         if (_patrolForward)
         {
-            Debug.Log("Going forward!");
+            // Debug.Log("Going forward!");
             _currentPatrolIndex = (_currentPatrolIndex + 1) % _patrolPoints.Count;
         }
         else
         {
-            Debug.Log("Going backward!");
+            // Debug.Log("Going backward!");
             if (--_currentPatrolIndex < 0)
             {
                 _currentPatrolIndex = _patrolPoints.Count - 1;

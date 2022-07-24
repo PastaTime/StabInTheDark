@@ -30,7 +30,7 @@ public class TimerScript : MonoBehaviour
             }
             else
             {
-                GO.GetComponent<GameOver>().showFinished(false);
+                GO.showFinished();
                 timeLeft = 0;
                 timerOn = false;
             }

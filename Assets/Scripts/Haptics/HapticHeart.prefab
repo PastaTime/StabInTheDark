@@ -1,0 +1,154 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &5071484379946429491
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2510642036717478159, guid: 2db761d8f8677c149a95a85d9abd6584, type: 3}
+      propertyPath: m_Name
+      value: HapticHeart
+      objectReference: {fileID: 0}
+    - target: {fileID: 2510642036717478260, guid: 2db761d8f8677c149a95a85d9abd6584, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2510642036717478260, guid: 2db761d8f8677c149a95a85d9abd6584, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 32.490025
+      objectReference: {fileID: 0}
+    - target: {fileID: 2510642036717478260, guid: 2db761d8f8677c149a95a85d9abd6584, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.5999947
+      objectReference: {fileID: 0}
+    - target: {fileID: 2510642036717478260, guid: 2db761d8f8677c149a95a85d9abd6584, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -17.415075
+      objectReference: {fileID: 0}
+    - target: {fileID: 2510642036717478260, guid: 2db761d8f8677c149a95a85d9abd6584, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2510642036717478260, guid: 2db761d8f8677c149a95a85d9abd6584, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2510642036717478260, guid: 2db761d8f8677c149a95a85d9abd6584, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2510642036717478260, guid: 2db761d8f8677c149a95a85d9abd6584, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2510642036717478260, guid: 2db761d8f8677c149a95a85d9abd6584, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2510642036717478260, guid: 2db761d8f8677c149a95a85d9abd6584, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2510642036717478260, guid: 2db761d8f8677c149a95a85d9abd6584, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2510642036717478261, guid: 2db761d8f8677c149a95a85d9abd6584, type: 3}
+      propertyPath: Loop
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2510642036717478261, guid: 2db761d8f8677c149a95a85d9abd6584, type: 3}
+      propertyPath: m_Pitch
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2510642036717478261, guid: 2db761d8f8677c149a95a85d9abd6584, type: 3}
+      propertyPath: MaxDistance
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 2510642036717478261, guid: 2db761d8f8677c149a95a85d9abd6584, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 3c4299399020c7d489f1582fa6fce526, type: 3}
+    - target: {fileID: 2510642036717478261, guid: 2db761d8f8677c149a95a85d9abd6584, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2510642036717478261, guid: 2db761d8f8677c149a95a85d9abd6584, type: 3}
+      propertyPath: spreadCustomCurve.m_Curve.Array.data[0].value
+      value: 0.1388889
+      objectReference: {fileID: 0}
+    - target: {fileID: 2510642036717478261, guid: 2db761d8f8677c149a95a85d9abd6584, type: 3}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 0.1
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 3100536282190220544, guid: 2db761d8f8677c149a95a85d9abd6584, type: 3}
+  m_SourcePrefab: {fileID: 100100000, guid: 2db761d8f8677c149a95a85d9abd6584, type: 3}
+--- !u!1 &7257022540308237628 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2510642036717478159, guid: 2db761d8f8677c149a95a85d9abd6584, type: 3}
+  m_PrefabInstance: {fileID: 5071484379946429491}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1983052106
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7257022540308237628}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfb453875ac68bf469e81bc513da38c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hapticInfo:
+    hapticArray:
+    - -0.5
+    - 0
+    - 0
+    - 0
+    - 1
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    hapticMaxDistance: 50
+    tickInterval: 0.05
+    isHapticLooping: 1
+  hapticStrength: 1
+  hapticOffset: 0
+  syncAudioToHaptic: 1
+  playHapticOnStart: 0
+  playHapticOnCollision: 0
+--- !u!114 &1983052114
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7257022540308237628}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 069810e69020f5940b1d9788f1823655, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  paceIntensity: 2
