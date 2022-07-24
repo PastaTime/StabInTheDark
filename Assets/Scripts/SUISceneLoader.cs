@@ -22,23 +22,25 @@ public class SUISceneLoader : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.anyKeyDown)
+        float SUIHorizontal = Input.GetAxis("SUIHorizontal");
+        float SUIVertical = Input.GetAxis("SUIVertical");
+        if (Input.GetAxis("SUIHorizontal") != 0 || Input.GetAxis("SUIVertical") != 0 || Input.anyKeyDown)
         {
             audioSource.Stop();
-            if (Input.GetKey(KeyCode.Alpha1))
+            if (SUIVertical == 1)
             {
                 print("load game");
                 SceneManager.LoadScene(gameSceneName);
             }
-            else if (Input.GetKey(KeyCode.Alpha2))
+            else if (SUIHorizontal == 1)
             {
                 audioSource.PlayOneShot(adjustVolumeClip, 1.0f);
             }
-            else if (Input.GetKey(KeyCode.Alpha3))
+            else if (SUIVertical == -1)
             {
                 audioSource.PlayOneShot(turnOnScreenClip, 1.0f);
             }
-            else if (Input.GetKey(KeyCode.Alpha4))
+            else if (SUIHorizontal == -1)
             {
                 audioSource.PlayOneShot(leavingClip, 1.0f);
 
@@ -46,13 +48,9 @@ public class SUISceneLoader : MonoBehaviour
                 Application.Quit();
                 print("quit");
             }
-            else if (Input.GetKey(KeyCode.Alpha0))
-            {
-                audioSource.PlayOneShot(welcomeClip, 1.0f);
-            }
             else
             {
-                audioSource.PlayOneShot(invalidInputClip, 1.0f);
+                audioSource.PlayOneShot(welcomeClip, 1.0f);
             }
         }
     }
