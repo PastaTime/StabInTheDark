@@ -22,7 +22,7 @@ public class PlayerControllerAlternate : MonoBehaviour
     void Update()
     {
         rotateInput = Input.GetAxis("RotateX");
-        Debug.Log(rotateInput);
+        // Debug.Log(rotateInput);
         movement = (transform.forward * Input.GetAxis("Vertical")) + (transform.right * Input.GetAxis("Horizontal"));
     }
  
@@ -37,7 +37,8 @@ public class PlayerControllerAlternate : MonoBehaviour
     {
         if (alwaysFaceNorth)
         {
-            rb.velocity = new Vector3(Input.GetAxis("Horizontal"), 0.0f, Input.GetAxis("Vertical")) * speed * Time.fixedDeltaTime;
+            rb.velocity = direction * speed * Time.fixedDeltaTime;
+            //rb.velocity = new Vector3(Input.GetAxis("Horizontal"), 0.0f, Input.GetAxis("Vertical")) * speed * Time.fixedDeltaTime;
         }
         else
         {

@@ -225,6 +225,7 @@ MonoBehaviour:
   turnSpeed: 10
   rb: {fileID: 0}
   movement: {x: 0, y: 0, z: 0}
+  alwaysFaceNorth: 1
 --- !u!114 &397401599
 MonoBehaviour:
   m_ObjectHideFlags: 0

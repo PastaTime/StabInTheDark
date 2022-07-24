@@ -21,10 +21,8 @@ public class GameOver : MonoBehaviour
     }
 
     void OnTriggerEnter(Collider other)
-    {   
-        PlayerController controller = other.GetComponent<PlayerController>();
-
-        if (controller != null)
+    {
+        if (other.gameObject.tag == "Player")
         {
             Destroy(gameObject);
             showFinished();
