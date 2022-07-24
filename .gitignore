@@ -67,5 +67,3 @@ crashlytics-build.properties
 .idea/
 
 .vsconfig
-/Assets/Resources/SUISFX/lostGame.wav.meta
-*.wav
