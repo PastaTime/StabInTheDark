@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class Waypoint : MonoBehaviour
+public class WaypointScript : MonoBehaviour
 {
     [SerializeField]
     protected float debugDrawRadius = 1.0F;
